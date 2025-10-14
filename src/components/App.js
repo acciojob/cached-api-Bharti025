@@ -14,7 +14,7 @@ const App = () => {
 
   const memoData=useMemo(()=>{
     if(!data){
-      return <p>Loading ...</p>
+      return <p>Loading...</p>;
     }
     else{
       return data;
@@ -22,7 +22,8 @@ const App = () => {
   },[data]);
 
   return (
-    <div>
+   
+      <ul>
     {memoData.map((post)=>
    (
    <li key={post.id}>
@@ -30,7 +31,8 @@ const App = () => {
                   <p>{post.body}</p>
                 </li>
    ))}
-  </div>
+   </ul>
+  
   )
 }
 
