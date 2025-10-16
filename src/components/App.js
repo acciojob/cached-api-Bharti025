@@ -22,17 +22,19 @@ const App = () => {
   },[data]);
 
   return (
-   
-      <ul>
-    {memoData.map((post)=>
-   (
-   <li key={post.id}>
-                  <strong>{post.title}</strong>
-                  <p>{post.body}</p>
-                </li>
-   ))}
-   </ul>
-  
+    <div>
+   {loading?<p>Loading...</p> :
+    (<div>
+      {memoData.map((item)=>
+      {
+        <div>
+          <h4>{item.title}</h4>
+          <p>{item.body}</p>
+          <small>User ID : {item.userId}</small>
+          </div>
+      })}
+    </div>)}
+    </div>
   )
 }
 
