@@ -26,13 +26,13 @@ const App = () => {
    {loading?<p>Loading...</p> :
     (<ul>
       {memoData.map((item)=>
-      {
+      
         <li key={item.id}>
           <h4>{item.title}</h4>
           <p>{item.body}</p>
           <small>User ID : {item.userId}</small>
           </li>
-      })}
+      )}
     </ul>)}
     </div>
   )
